@@ -3,25 +3,33 @@ Rubber Duckie is a simple bot for Slack. It reads a single file from github (Top
 The topics file is a simple text file on this format:
 
 ?questionregex
+
 -answer
 
 Multiple questions can lead to a single answer:
 
 ?questionregex1
+
 ?questionregex2
+
 -answer
 
 And one question can have multiple answers, one of which will be chosen at random:
 
 ?questionregex
+
 -answer1
+
 -answer2
 
 Multiple sets of questions and answers may simply be concatenated:
 
 ?questionregex1
+
 -answer1
+
 ?questionregex2
+
 -answer2
 
 In this case, if the question matches the first regex, answer1 will be returned. If the question instead matches the second regex, answer2 will be returned.
