@@ -1,4 +1,4 @@
-+\?
+?\?
 -What is the root problem?
 -What do you think?
 -Can you ask someone else?
@@ -9,3 +9,6 @@
 -I'm only a duck. You fix it. Quack.
 -Write, monkey, write!
 -What?! I didn't do it.
+?.*cluck.*
+?.*quack.*
+-Quack. Quack-quack.

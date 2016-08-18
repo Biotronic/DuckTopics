@@ -39,7 +39,7 @@ function LoadreplySets($input) {
         $tail = substr($line, 1);
         if ($head == "-") {
             $reply = true;
-        } else if ($head == "+") {
+        } else if ($head == "?") {
             if ($reply) {
                 $reply = false;
                 $replySets[] = $set;
