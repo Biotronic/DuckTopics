@@ -14,6 +14,7 @@ class ReplySet {
     public $replies = array();
     
     public function IsMatch($text) {
+        if (count($replies) == 0) return false;
         foreach ($this->matches as $match) {
             if (preg_match("/$match/i", $text)) {
                 return true;
@@ -36,7 +37,7 @@ function LoadreplySets($input) {
     $set = new ReplySet();
     foreach ($arr as $line) {
         $head = substr($line, 0, 1);
-        $tail = substr($line, 1);
+        $tail = trim(substr($line, 1));
         if ($head == "-") {
             $reply = true;
         } else if ($head == "?") {
@@ -50,20 +51,13 @@ function LoadreplySets($input) {
         }
         
         if ($reply) {
-            $set->replies[] = trim($tail);
+            $set->replies[] = $tail;
         } else {
-            $set->matches[] = trim($tail);
+            $set->matches[] = $tail;
         }
     }
     $replySets[] = $set;
 }
-
-//$dir = new DirectoryIterator(dirname(__FILE__)."/topics");
-//foreach ($dir as $fileinfo) {
-//    if (!$fileinfo->isDot()) {
-//        LoadreplySets(file_get_contents(dirname(__FILE__)."/topics/".$fileinfo->getFilename()));
-//    }
-//}
 
 LoadreplySets(file_get_contents("https://raw.githubusercontent.com/Biotronic/DuckTopics/master/Topics.txt"));
 
