@@ -19,4 +19,4 @@
 ?.*quack.*
 -Quack. Quack-quack.
 ?.*!.*
-Quack! Chill out, monkey!
+-Quack! Chill out, monkey!
