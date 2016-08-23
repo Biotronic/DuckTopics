@@ -50,9 +50,9 @@ function LoadreplySets($input) {
         }
         
         if ($reply) {
-            $set->replies[] = $tail;
+            $set->replies[] = trim($tail);
         } else {
-            $set->matches[] = $tail;
+            $set->matches[] = trim($tail);
         }
     }
     $replySets[] = $set;

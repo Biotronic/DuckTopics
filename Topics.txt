@@ -1,7 +1,13 @@
+// Format:
+// ?The leading question mark indicates this is a request.
+// ?Requests are on the form of a regex, and multiple requests can lead to a set of replies.
+// -Replies are indicated by a leading dash.
+// -As with requests, there can be one or more replies to one or more requests.
+// ?A reply followed by a request means a new set of requests and replies follows.
+// Any line not starting with either a dash or a question mark is a comment.
 ?\?
 -What is the root problem?
 -What do you think?
--Can you ask someone else?
 -Can you ask someone else?
 -What debugging have you done?
 -Have you tried turning it off and on again?
@@ -12,3 +18,5 @@
 ?.*cluck.*
 ?.*quack.*
 -Quack. Quack-quack.
+?!
+Quack! Chill out, monkey!
